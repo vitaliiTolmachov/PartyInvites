@@ -9,16 +9,28 @@
 <html>
 <head>
     <title>title</title>
+    <link href="~/Content/bootstrap-theme.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
     <meta name="description" content="The description of my page" />
 </head>
+<style>
+    body {
+        background-color: #F1F1F1;
+    }
+</style>
 <body>
-    <div>
+    <div class="text-center">
+
         <h1>Thank you, @Model.Name!</h1>
-        @if (Model.WillAttend == true) {
-            @:It's great 2 see U coming. Drinks are already at the fridge!
+        <div class="lead">
+            @if (Model.WillAttend == true) {
+                @:It's great 2 see U coming. Drinks are already at the fridge!
     } else {
-            @: Sorry 2 hear you didn't make it,but thanks 4 letting us know.
-        }
+                @: Sorry 2 hear you didn't make it,but thanks 4 letting us know.
+    }
+        </div>
+
     </div>
+
 </body>
 </html>

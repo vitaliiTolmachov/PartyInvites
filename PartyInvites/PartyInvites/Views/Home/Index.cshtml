@@ -7,19 +7,27 @@
 
 <html>
 <head>
-    <meta name="viewport" content="width=device-width" />
     <title>SomeView</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-theme.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width" />
     <meta name="description" content="The description of my page" />
 </head>
 <body>
-    <div>
-        @*<h2>@ViewData["Head"]</h2>*@
-        @ViewBag.Greetings world (from the view);
-        <p>
-            We're goin to have an axciting party.<br/>
-            To do: sell better, add some pictures with drinks and boobies
-        </p>
-        @Html.ActionLink("RSVP Now","RsvpForm");
+    <style>
+        body {
+            background-color: #F1F1F1;
+        }
+
+        .btn {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+    <div class="text-center">
+        <h2>We're goin to have an axciting party.</h2>
+        <h3>And you are invited</h3>
+        <div class="btn btn-success">@Html.ActionLink("RSVP Now", "RsvpForm")</div>
     </div>
 </body>
 </html>
