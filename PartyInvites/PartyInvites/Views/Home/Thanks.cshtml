@@ -19,15 +19,31 @@
     }
 </style>
 <body>
+    @*@{
+        try {
+            WebMail.SmtpServer = "smtp.gmail.com";
+            WebMail.SmtpPort = 465;
+            WebMail.EnableSsl = true;
+            WebMail.UserName = "v.tolmachov";
+            WebMail.Password = "Love_in_my_heart";
+            WebMail.From = "v.tolmachov@gmail.com";
+            WebMail.Send("v.tolmachov@gmail.com", "RSVP Notification",
+                @Model.Name + " is " + ((@Model.WillAttend ?? false) ? "" : "not")
+                + " attending");
+        } catch (Exception ex) {
+            @:<b>Sorry we couldn't send the e-mail to confirm your RSVP</b><br />
+            <b>@ex.Message</b>
+        }
+    }*@
     <div class="text-center">
 
         <h1>Thank you, @Model.Name!</h1>
         <div class="lead">
             @if (Model.WillAttend == true) {
                 @:It's great 2 see U coming. Drinks are already at the fridge!
-    } else {
+        } else {
                 @: Sorry 2 hear you didn't make it,but thanks 4 letting us know.
-    }
+        }
         </div>
 
     </div>
