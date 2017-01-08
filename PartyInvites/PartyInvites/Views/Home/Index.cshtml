@@ -1,0 +1,25 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>SomeView</title>
+    <meta name="description" content="The description of my page" />
+</head>
+<body>
+    <div>
+        @*<h2>@ViewData["Head"]</h2>*@
+        @ViewBag.Greetings world (from the view);
+        <p>
+            We're goin to have an axciting party.<br/>
+            To do: sell better, add some pictures with drinks and boobies
+        </p>
+        @Html.ActionLink("RSVP Now","RsvpForm");
+    </div>
+</body>
+</html>
