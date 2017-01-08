@@ -14,6 +14,7 @@
 <body>
     <div>
         @using (Html.BeginForm()) {
+            @Html.ValidationSummary();
             <p>Your name: @Html.TextBoxFor(guest => guest.Name)</p>
             <p>Your phone: @Html.TextBoxFor(guest => guest.Phone)</p>
             <p>Your e-mail: @Html.TextBoxFor(guest => guest.Email)</p>
